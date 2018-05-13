@@ -19,6 +19,11 @@ $ npm install
 $ serverless deploy
 ```
 
+OR if you'd like to deploy to multiple regions at once, use:
+```sh
+./deploy_global.sh
+```
+
 ## Config
 serverless-pagespeed-monitoring can be configured using `config.yml` file:
 
