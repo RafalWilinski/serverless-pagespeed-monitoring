@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "Puppeteer on AWS Lambda for monitoring pagespeed",
   "scripts": {
-    "package": "npm run package-prepare && cp chrome/headless_shell.tar.gz src && cd src && zip -rq ../package.zip .",
-    "package-nochrome": "npm run package-prepare && cd src && zip -rq ../package.zip .",
-    "package-prepare": "npm run lint && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 npm install --production",
+    "package": "npm run package-prepare && npm run copy-source && npm run install-deps && npm run copy-chrome && zip -rq ../package.zip .",
+    "copy-source": "cp -r src dist",
+    "install-deps": "cp package.json ./dist && cd dist && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 npm install --production",
+    "copy-chrome": "cp chrome/headless_shell.tar.gz dist",
+    "package-prepare": "npm run lint && rm -fr dist && rm -fr package.zip",
     "local": "node src/starter-kit/local.js",
     "lint": "./node_modules/.bin/eslint src"
   },
