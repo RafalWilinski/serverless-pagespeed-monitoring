@@ -16,7 +16,7 @@ Clone the repo, install dependencies and deploy function:
 ```
 $ git clone https://github.com/RafalWilinski/serverless-pagespeed-monitoring
 $ npm install
-$ npm run deploy
+$ serverless deploy
 ```
 
 ## Config
