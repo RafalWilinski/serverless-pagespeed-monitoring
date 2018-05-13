@@ -37,7 +37,7 @@ rate: <cloudwatch schedule expression e.g.: rate(1 hour)>
 
 After deploying, you can use CloudWatch Dashboard included in `example_dashboard.json` to visualize data:
 
-![Demo](assets/rpi-iot-serverless.png?raw=true "Serverless Pagespeed Demo")
+![Demo](assets/demo.png?raw=true "Serverless Pagespeed Demo")
 
 ## Development 
 
