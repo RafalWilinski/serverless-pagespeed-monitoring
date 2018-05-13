@@ -1,0 +1,3 @@
+metrics: 'fetchStart,domainLookupStart,domainLookupEnd,connectStart,connectEnd,loadEventStart,loadEventEnd,domComplete,domInteractive,domLoading,responseStart,responseEnd,requestStart,secureConnectionStart'
+url: https://ijr.com
+rate: rate(5 minutes)

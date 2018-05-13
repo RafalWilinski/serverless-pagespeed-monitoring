@@ -1,0 +1,23 @@
+{
+  "name": "serverless-pagespeed-monitoring",
+  "version": "0.0.1",
+  "description": "Puppeteer on AWS Lambda for monitoring pagespeed",
+  "scripts": {
+    "package": "npm run package-prepare && cp chrome/headless_shell.tar.gz src && cd src && zip -rq ../package.zip .",
+    "package-nochrome": "npm run package-prepare && cd src && zip -rq ../package.zip .",
+    "package-prepare": "npm run lint && PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 npm install --production",
+    "local": "node src/starter-kit/local.js",
+    "lint": "./node_modules/.bin/eslint src"
+  },
+  "dependencies": {
+    "puppeteer": "^1.1.1",
+    "tar": "^4.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.111.0",
+    "eslint": "^4.6.1",
+    "eslint-config-google": "^0.9.1",
+    "serverless-hooks-plugin": "^1.1.0",
+    "serverless-sam": "0.0.5"
+  }
+}

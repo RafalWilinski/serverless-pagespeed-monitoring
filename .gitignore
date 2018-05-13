@@ -85,3 +85,4 @@ jspm_packages
 
 # serverless
 .serverless
+src/headless_shell.tar.gz
