@@ -33,6 +33,12 @@ url: <url to be tested e.g.: https://google.com>
 rate: <cloudwatch schedule expression e.g.: rate(1 hour)>
 ```
 
+## Demo & Example Dashboard
+
+After deploying, you can use CloudWatch Dashboard included in `example_dashboard.json` to visualize data:
+
+[Demo](assets/demo.png)
+
 ## Development 
 
 ```sh

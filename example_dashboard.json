@@ -1,0 +1,117 @@
+{
+  "widgets": [
+      {
+          "type": "metric",
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 6,
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "region": "us-east-1",
+              "metrics": [
+                  [ "Pagespeed", "domComplete", "Region", "us-east-1", "URL", "https://google.com", { "label": "Page Loading Complete" } ],
+                  [ ".", "domInteractive", ".", ".", ".", ".", { "label": "Page Interactive" } ],
+                  [ ".", "domLoading", ".", ".", ".", ".", { "label": "Page Loading Start" } ]
+              ],
+              "title": "[us-east-1 - N. Virginia] DOM Events Timing",
+              "period": 300
+          }
+      },
+      {
+          "type": "metric",
+          "x": 12,
+          "y": 0,
+          "width": 12,
+          "height": 6,
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "metrics": [
+                  [ "Pagespeed", "domInteractive", "Region", "us-east-2", "URL", "https://google.com", { "label": "Page Interactive", "color": "#ff7f0e" } ],
+                  [ ".", "domLoading", ".", ".", ".", ".", { "label": "Page Loading Start", "color": "#2ca02c" } ],
+                  [ ".", "domComplete", ".", ".", ".", ".", { "color": "#1f77b4", "label": "Page Loading Complete" } ]
+              ],
+              "region": "us-east-2",
+              "title": "[us-east-2 - Ohio] DOM Events Timing",
+              "period": 300
+          }
+      },
+      {
+          "type": "metric",
+          "x": 0,
+          "y": 6,
+          "width": 12,
+          "height": 6,
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "metrics": [
+                  [ "Pagespeed", "domLoading", "Region", "us-west-1", "URL", "https://google.com", { "label": "Page Loading Start", "color": "#2ca02c" } ],
+                  [ ".", "domComplete", ".", ".", ".", ".", { "label": "Page Loading Complete", "color": "#1f77b4" } ],
+                  [ ".", "domInteractive", ".", ".", ".", ".", { "label": "Page Interactive", "color": "#ff7f0e" } ]
+              ],
+              "region": "us-west-1",
+              "title": "[us-west-1 - N. California] DOM Events Timing",
+              "period": 300
+          }
+      },
+      {
+          "type": "metric",
+          "x": 12,
+          "y": 6,
+          "width": 12,
+          "height": 6,
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "metrics": [
+                  [ "Pagespeed", "domInteractive", "Region", "us-west-2", "URL", "https://google.com", { "label": "Page Interactive", "color": "#ff7f0e" } ],
+                  [ ".", "domLoading", ".", ".", ".", ".", { "label": "Page Loading Start", "color": "#2ca02c" } ],
+                  [ ".", "domComplete", ".", ".", ".", ".", { "label": "Page Loading Complete", "color": "#1f77b4" } ]
+              ],
+              "region": "us-west-2",
+              "title": "[us-west-2 - Oregon] DOM Events Timing",
+              "period": 300
+          }
+      },
+      {
+          "type": "metric",
+          "x": 12,
+          "y": 12,
+          "width": 12,
+          "height": 6,
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "metrics": [
+                  [ "Pagespeed", "domComplete", "Region", "eu-central-1", "URL", "https://google.com", { "label": "Page Loading Complete" } ],
+                  [ ".", "domLoading", ".", ".", ".", ".", { "label": "Page Loading Start", "color": "#2ca02c" } ],
+                  [ ".", "domInteractive", ".", ".", ".", ".", { "label": "Page Interactive", "color": "#ff7f0e" } ]
+              ],
+              "region": "eu-central-1",
+              "title": "[eu-central-1 - Frankfurt] DOM Events Timing"
+          }
+      },
+      {
+          "type": "metric",
+          "x": 0,
+          "y": 12,
+          "width": 12,
+          "height": 6,
+          "styles": "undefined",
+          "properties": {
+              "view": "timeSeries",
+              "stacked": false,
+              "metrics": [
+                  [ "Pagespeed", "domInteractive", "Region", "sa-east-1", "URL", "https://google.com", { "label": "Page Interactive", "color": "#ff7f0e" } ],
+                  [ ".", "domComplete", ".", ".", ".", ".", { "label": "Page Loading Complete", "color": "#1f77b4" } ],
+                  [ ".", "domLoading", ".", ".", ".", ".", { "label": "Page Loading Start" } ]
+              ],
+              "region": "sa-east-1",
+              "title": "[sa-east-1 - Sao Paulo] DOM Events Timing"
+          }
+      }
+  ]
+}
