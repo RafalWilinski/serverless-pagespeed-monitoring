@@ -2,7 +2,7 @@
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
-Measure your webpage real speed, Serverless way.
+Measure your webpage real speed from multiple regions in a serverless way.
 
 ## Usage
 First, ensure that you have [Serverless Framework](serverless.com) installed. If not, install it:
@@ -21,7 +21,7 @@ $ serverless deploy
 
 OR if you'd like to deploy to multiple regions at once, use:
 ```sh
-./deploy_global.sh
+$ ./deploy_global.sh
 ```
 
 ## Config
