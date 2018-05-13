@@ -39,6 +39,10 @@ exports.run = async (browser) => {
           Name: 'URL',
           Value: process.env.url,
         },
+        {
+          Name: 'Region',
+          Value: process.env.AWS_REGION,
+        },
       ],
     }));
 
