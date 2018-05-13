@@ -1,8 +1,8 @@
-## serverless-pagespeed-monitoring
+# serverless-pagespeed-monitoring
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
-Expose AWS Cloudwatch Metrics as a public HTML page using AWS Lambda.
+Measure your webpage real speed, Serverless way.
 
 ## Usage
 First, ensure that you have [Serverless Framework](serverless.com) installed. If not, install it:
@@ -36,6 +36,3 @@ AWS_REGION=us-east-1 npm run local
 
 ## License
 MIT © [Rafal Wilinski](http://rwilinski.me)
-
-### Credits
-Logo by [Dinosoft Labs](https://thenounproject.com/dinosoftlabs/)
