@@ -5,13 +5,19 @@ const CloudWatch = new AWS.CloudWatch();
 exports.handler = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
   const browser = await setup.getBrowser();
+
   exports
     .run(browser)
-    .then((result) => callback(null, result))
-    .catch((err) => callback(err));
+    .then((result) => {
+      callback(null, result);
+    })
+    .catch((err) => {
+      callback(err);
+    });
 };
 
 exports.run = async (browser) => {
+  console.log('Running measurement...');
   const page = await browser.newPage();
   const observedMetrics = process.env.metrics.split(',');
 
@@ -22,12 +28,12 @@ exports.run = async (browser) => {
   const paints = await page.evaluate((_) => performance.timing.toJSON());
   const requestStart = paints.navigationStart;
 
-  const MetricData = Object.entries(paints)
-    .filter(([key, value]) => observedMetrics.includes(key))
-    .map(([key, value]) => ({
+  const MetricData = Object.keys(paints)
+    .filter((key) => observedMetrics.includes(key))
+    .map((key) => ({
       MetricName: key,
       Unit: 'Milliseconds',
-      Value: value - requestStart,
+      Value: paints[key] - requestStart,
       Dimensions: [
         {
           Name: 'URL',
